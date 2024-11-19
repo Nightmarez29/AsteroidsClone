@@ -10,10 +10,13 @@ public class PlayerControl : MonoBehaviour
     public float turnSpeed;
     public float moveSpeed;
 
+    [Header("Projectile Object")]
+    public GameObject projectilePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
@@ -24,5 +27,10 @@ public class PlayerControl : MonoBehaviour
 
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed * forwordInput);
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilePrefab, transform.position, transform.rotation);
+        }
     }
 }
