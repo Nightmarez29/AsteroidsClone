@@ -33,7 +33,7 @@ public class ScreenWrap : MonoBehaviour
                 );
         }
 
-        if(transform.position.x > zMax)
+        if(transform.position.z > zMax)
         {
             transform.position = new Vector3(
                transform.position.x,
@@ -42,7 +42,7 @@ public class ScreenWrap : MonoBehaviour
                );
         }
 
-        if(transform.position.x > zMin)
+        if(transform.position.z < zMin)
         {
             transform.position = new Vector3(
                 transform.position.x,
