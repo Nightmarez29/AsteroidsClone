@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidControl : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [Header("Asteroid Movement")]
-    public float Speed;
     public float moveSpeed;
     private Rigidbody enemyRb;
     private GameObject player;
@@ -22,7 +21,7 @@ public class AsteroidControl : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-        enemyRb.AddForce(lookDirection * Speed);
+        enemyRb.AddForce(lookDirection * moveSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)
