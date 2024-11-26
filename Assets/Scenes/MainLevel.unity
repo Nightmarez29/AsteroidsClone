@@ -657,8 +657,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5744518640974929913, guid: 53e4891b98c59a949933c0b1b2d4d282, type: 3}
+  enemySmallPrefab: {fileID: 1447185269664025617, guid: 251ffcbb479461647a4d59993e61c00a, type: 3}
+  enemyLargePrefab: {fileID: 1646075892264687316, guid: dee53e2e82698c54387cdfff81ce1621, type: 3}
   enemyCount: 1
-  waveNumber: 5
+  waveNumber: 1
 --- !u!4 &1966061274
 Transform:
   m_ObjectHideFlags: 0
