@@ -6,6 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     [Header("Wave Numbers")]
     public GameObject enemyPrefab;
+    public GameObject enemySmallPrefab;
+    public GameObject enemyLargePrefab;
     public int enemyCount;
     public int waveNumber = 1;
 
@@ -39,7 +41,7 @@ public class SpawnManager : MonoBehaviour
     {
         for(int i = 0; i < enemiesToSpawn; i++)
         {
-            Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+            Instantiate(enemyLargePrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
     }
 }
