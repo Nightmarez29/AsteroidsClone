@@ -131,6 +131,8 @@ MonoBehaviour:
   moveSpeed: 1
   smallerEnemy: {fileID: 1447185269664025617, guid: 251ffcbb479461647a4d59993e61c00a, type: 3}
   smallerEnemyToSpawn: 2
+  pointValue: 1
+  gm: {fileID: 0}
 --- !u!114 &5744518640974929918
 MonoBehaviour:
   m_ObjectHideFlags: 0

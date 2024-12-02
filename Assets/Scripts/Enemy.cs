@@ -13,11 +13,16 @@ public class Enemy : MonoBehaviour
     public GameObject smallerEnemy;
     public int smallerEnemyToSpawn;
 
+    [Header("Score")]
+    public int pointValue;
+    public GameManager gm;
+
     // Start is called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -32,6 +37,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            gm.AddScore(pointValue);
             Destroy(collision.gameObject);
             SpawnSmaller(smallerEnemyToSpawn);
             Destroy(gameObject);
